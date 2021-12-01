@@ -4,9 +4,9 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="solicode"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2021-12-01 04:29:31 "/>
+        <attribute name="saved" value="2021-12-01 06:26:11 "/>
         <attribute name="created" value="c29saWNvZGU7REVTS1RPUC0yMkdBTTM1OzIwMjEtMTItMDE7IjAxOjA5OjAzICI7MzAyNw=="/>
-        <attribute name="edited" value="c29saWNvZGU7REVTS1RPUC0yMkdBTTM1OzIwMjEtMTItMDE7IjA0OjI5OjMxICI7MTszMTQx"/>
+        <attribute name="edited" value="c29saWNvZGU7REVTS1RPUC0yMkdBTTM1OzIwMjEtMTItMDE7IjA2OjI2OjExICI7NjszMTQz"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -16,6 +16,7 @@
             <assign variable="Attempts" expression="10"/>
             <declare name="guess" type="Integer" array="False" size=""/>
             <assign variable="number" expression="Random(101)"/>
+            <output expression="&quot;you have 10 attemptes&quot;" newline="True"/>
             <output expression="&quot;guess a number between 1 and 100&quot;" newline="False"/>
             <input variable="guess"/>
             <while expression="guess &lt;&gt; number">
