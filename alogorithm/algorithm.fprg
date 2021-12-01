@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="solicode"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-12-01 04:29:31 "/>
+        <attribute name="created" value="c29saWNvZGU7REVTS1RPUC0yMkdBTTM1OzIwMjEtMTItMDE7IjAxOjA5OjAzICI7MzAyNw=="/>
+        <attribute name="edited" value="c29saWNvZGU7REVTS1RPUC0yMkdBTTM1OzIwMjEtMTItMDE7IjA0OjI5OjMxICI7MTszMTQx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="number" type="Integer" array="False" size=""/>
+            <declare name="Attempts" type="Integer" array="False" size=""/>
+            <assign variable="Attempts" expression="10"/>
+            <declare name="guess" type="Integer" array="False" size=""/>
+            <assign variable="number" expression="Random(101)"/>
+            <output expression="&quot;guess a number between 1 and 100&quot;" newline="False"/>
+            <input variable="guess"/>
+            <while expression="guess &lt;&gt; number">
+                <if expression="guess &lt; number">
+                    <then>
+                        <output expression="&quot;too low , try again&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;too high, try again&quot;" newline="True"/>
+                    </else>
+                </if>
+                <assign variable="Attempts" expression="Attempts - 1"/>
+                <input variable="guess"/>
+                <if expression="Attempts = 0">
+                    <then>
+                        <output expression="&quot;you lost&quot;" newline="True"/>
+                        <breakpoint/>
+                    </then>
+                    <else/>
+                </if>
+            </while>
+            <if expression="Attempts &gt;= 8">
+                <then>
+                    <if expression="number == guess">
+                        <then/>
+                        <else/>
+                    </if>
+                    <output expression="&quot;damn you are a genius&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="guess == number">
+                        <then>
+                            <output expression="&quot;that was correct the number was &quot;&amp;number &amp; &quot;You took&quot; &amp; Attempts &amp; &quot;goes&quot;" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
